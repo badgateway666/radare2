@@ -35,10 +35,10 @@ static ut32 asn1_ber_indefinite (const ut8 *buffer, ut32 length) {
 	return (next - buffer) + 2;
 }
 
-static RASN1Object *asn1_parse_header (const ut8 *buffer, ut32 length, const ut8 *start_pointer) {
+static RASN1Object *asn1_parse_header(const ut8 *buffer, ut32 length, const ut8 *start_pointer) {
 	ut8 head, length8, byte;
 	ut64 length64;
-	if (!buffer || length < 2) {
+	if (!buffer || length < 8) {
 		return NULL;
 	}
 
